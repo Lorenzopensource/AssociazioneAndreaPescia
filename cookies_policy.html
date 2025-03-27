@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contatti - Associazione Andrea Pescia</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="contatti.css">
+</head>
+<body>
+  <input type="checkbox" id="menu-toggle" hidden>
+  <div class="wrapper">
+    <header class="blur">
+      <div class="logo">
+        <a href="index.php">
+          <img src="media/immagini/icone/icon.png" alt="Logo">
+        </a>
+      </div>
+      <nav class="desktop-nav">
+        <ul>
+          <li><a href="index.php">Home</a></li>
+          <li><a href="about.html">Su di Noi</a></li>
+          <li><a href="sostienici.php" style="color: orange">❤️ Sostienici</a></li>
+          <li><a href="eventi.php">Eventi</a></li>
+          <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+      </nav>
+      <label for="menu-toggle" class="hamburger-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </label>
+    </header>
+
+    <main>
+      <section class="cookie-policy">
+        <h1>Cookie Policy</h1>
+        <p>Ultimo aggiornamento: 27 Marzo 2025</p>
+        <h2>1. Introduzione</h2>
+        <p>La presente Cookie Policy ha lo scopo di informare gli utenti di Associazione Andrea Pescia riguardo all'uso dei cookie durante la navigazione sul nostro sito. Un cookie è un piccolo file di testo che viene memorizzato sul dispositivo dell'utente quando visita un sito web.</p>
+        <h2>2. Tipologie di Cookie Utilizzati</h2>
+        <p>Associazione Andrea Pescia utilizza esclusivamente cookie tecnici, necessari per il corretto funzionamento del sito. Questi cookie non raccolgono informazioni personali identificabili e non richiedono il consenso dell'utente.</p>
+        <h2>3. Consenso all'Uso dei Cookie</h2>
+        <p>Al primo accesso al nostro sito, viene visualizzato un banner informativo che comunica l'uso di cookie tecnici e richiede il consenso dell'utente. Cliccando su 'Accetta', l'utente acconsente all'uso di questi cookie. La scelta viene memorizzata fino a che l'utente non eliminerà manualmente le preferenze utilizzando gli strumenti offerti dal browser.</p>
+        <h2>4. Gestione dei Cookie</h2>
+        <p>L'utente può gestire le preferenze relative ai cookie direttamente attraverso le impostazioni del proprio browser, rifiutando l'installazione di cookie non essenziali. Il rifiuto dei cookie tecnici non compromette la funzionalità del sito.</p>
+        <h2>5. Modifiche alla Cookie Policy</h2>
+        <p>Eventuali modifiche alla presente Cookie Policy saranno pubblicate su questa pagina con indicazione della data di aggiornamento.</p>
+        <h2>6. Contatti</h2>
+        <p>Per ulteriori informazioni sull'uso dei cookie, contattaci all'indirizzo info@associazioneandreapescia.org.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Un ringraziamento speciale ai nostri sponsor:</p>
+      <div class="sponsor-logos">
+        <div class="logos-track">
+          <img src="media/immagini/icone/sponsor/smart.png" alt="Smart Media">
+          <img src="media/immagini/icone/sponsor/rotoflex.png" alt="Rotoflex">
+          <img src="media/immagini/icone/sponsor/fiar.png" alt="Fiar">
+          <img src="media/immagini/icone/sponsor/gian.png" alt="Evangelista Gianfranco">
+          <img src="media/immagini/icone/sponsor/denire.png" alt="Denire">
+          <img src="media/immagini/icone/sponsor/vico.png" alt="Vico">
+          <img src="media/immagini/icone/sponsor/morocolor.png" alt="Morocolor">
+          <img src="media/immagini/icone/sponsor/b2.png" alt="B2">
+          <img src="media/immagini/icone/sponsor/terme.png" alt="Terme Preistoriche">
+        </div>
+      </div>
+      <p>&copy; 2025 Associazione Andrea Pescia. All rights reserved.</p>
+    </footer>
+  </div>
+
+  <div class="side-menu">
+    <label for="menu-toggle" class="close-btn">&times;</label>
+    <ul>
+      <li><a href="index.php">Home</a></li>
+      <li><a href="about.html">Su di Noi</a></li>
+      <li><a href="sostienici.php">❤️ Sostienici</a></li>
+      <li><a href="eventi.php">Eventi</a></li>
+      <li><a href="contatti.html">Contatti</a></li>
+    </ul>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const autoShowElements = document.querySelectorAll(".autoShow");
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      autoShowElements.forEach(el => observer.observe(el));
+    });
+  </script>
+</body>
+</html>
